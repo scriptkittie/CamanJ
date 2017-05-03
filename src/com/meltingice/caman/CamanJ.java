@@ -57,6 +57,22 @@ public class CamanJ {
 
 		this.filters = new LinkedList<CamanFilter>();
 	}
+	
+	/**
+	 * Creates a new standard CamanJ object
+	 * 
+	 * @param image
+	 *            The image to load
+	 */
+	public CamanJ(BufferedImage image) {
+		try {
+			this.image = new Image(image);
+		} catch (IOException e) {
+			System.err.println("CamanJ: Unable to load image from BufferedImagee");
+		}
+
+		this.filters = new LinkedList<CamanFilter>();
+	}
 
 	/**
 	 * Lazy-loads a filter using reflection and adds it to the filter list so

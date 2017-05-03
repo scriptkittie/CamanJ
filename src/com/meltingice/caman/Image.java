@@ -42,6 +42,20 @@ public class Image {
 
 		this.prepare();
 	}
+	
+	/**
+	 * Creates a new Image based on the given BufferedImage.
+	 * 
+	 * @param inputImage
+	 *            The image to load
+	 * @throws IOException
+	 *             If the image cannot be found or loaded.
+	 */
+	public Image(BufferedImage inputImage) throws IOException {
+		image = inputImage;
+		pixels = new int[getWidth() * getHeight()];
+		image.getRGB(0, 0, getWidth(), getHeight(), pixels, 0, getWidth());
+	}
 
 	/**
 	 * Prepares the image by loading it and retrieving its pixel values.
