@@ -1,5 +1,5 @@
 output/*
 bin
 .settings
-update_docs.sh
+.classpath
 /target/
