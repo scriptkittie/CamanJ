@@ -22,8 +22,8 @@ public class Jarques implements CamanPreset {
 	/* (non-Javadoc)
 	 * @see com.meltingice.caman.CamanPreset#apply()
 	 */
-	@Override
-	public void apply(CamanJ caman) {
+	public void apply(CamanJ caman)
+	{
 		caman.filter("saturation").set(-35);
 		caman.filter("curves")
 			.set("b")
